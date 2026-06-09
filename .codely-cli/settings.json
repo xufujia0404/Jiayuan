@@ -1,0 +1,24 @@
+{
+  "model": "codely-core",
+  "models": {
+    "deepseek-v4-pro": {
+      "authType": "openai",
+      "displayName": "deepseek4",
+      "baseUrl": "https://api.deepseek.com",
+      "apiKey": "sk-fb7345b0108e426896511e8ed213b1fa",
+      "roles": [
+        "chat"
+      ]
+    },
+    "mimo-v2.5-pro": {
+      "authType": "openai",
+      "displayName": "mimo-v2.5-pro",
+      "baseUrl": "https://token-plan-cn.xiaomimimo.com/v1",
+      "apiKey": "tp-c14d6en8htdoz5lp30ufnhyffq4srsd9jwcrnt5ob8rdfqr7",
+      "roles": [
+        "chat",
+        "vl"
+      ]
+    }
+  }
+}

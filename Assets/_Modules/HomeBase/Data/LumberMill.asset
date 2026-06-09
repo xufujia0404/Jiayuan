@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f68a13fdf06134191deb02c16fbe5a, type: 3}
+  m_Name: LumberMill
+  m_EditorClassIdentifier: 
+  buildingId: lumber_mill
+  buildingName: "\u4F10\u6728\u573A"
+  description: "\u81EA\u52A8\u4EA7\u51FA\u6728\u6750\u7684\u8D44\u6E90\u5EFA\u7B51"
+  buildingType: 0
+  icon: {fileID: 21300000, guid: db82d773f906d47498669e01da214da5, type: 3}
+  prefab: {fileID: 0}
+  gridSize: {x: 2, y: 2}
+  levels:
+  - level: 1
+    upgradeCost: 0
+    buildCost: 80
+    productionRate: 1
+    productionCapacity: 8
+    storageCapacity: 0
+  - level: 2
+    upgradeCost: 160
+    buildCost: 0
+    productionRate: 2
+    productionCapacity: 16
+    storageCapacity: 0
+  - level: 3
+    upgradeCost: 400
+    buildCost: 0
+    productionRate: 3
+    productionCapacity: 30
+    storageCapacity: 0
+  targetModuleId: 
+  targetSceneName: 
+  producedResource: 2

@@ -1,0 +1,39 @@
+{
+  "items": [
+    { "id": 5001, "name": "初出茅庐", "description": "完成新手引导", "category": 1, "iconColorHex": "#FFD54F", "iconSymbol": "🏆", "targetCount": 1, "currentCount": 1, "status": 2, "rewards": [ {"rewardType": 0, "amount": 200}, {"rewardType": 3, "amount": 30} ], "sortIndex": 1 },
+    { "id": 5002, "name": "小试身手", "description": "通过第1关", "category": 1, "iconColorHex": "#81C784", "iconSymbol": "🎯", "targetCount": 1, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 100} ], "sortIndex": 2 },
+    { "id": 5003, "name": "崭露头角", "description": "通过5个不同关卡", "category": 1, "iconColorHex": "#64B5F6", "iconSymbol": "🌟", "targetCount": 5, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 500}, {"rewardType": 1, "amount": 20} ], "sortIndex": 3 },
+    { "id": 5004, "name": "声名远扬", "description": "通过10个不同关卡", "category": 1, "iconColorHex": "#CE93D8", "iconSymbol": "👑", "targetCount": 10, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 1000}, {"rewardType": 1, "amount": 50} ], "sortIndex": 4 },
+    { "id": 5005, "name": "身经百战", "description": "玩家等级达到10级", "category": 1, "iconColorHex": "#FF8A65", "iconSymbol": "⬆️", "targetCount": 10, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 100} ], "sortIndex": 5 },
+    { "id": 5006, "name": "登峰造极", "description": "玩家等级达到20级", "category": 1, "iconColorHex": "#F06292", "iconSymbol": "🔺", "targetCount": 20, "currentCount": 0, "status": 0, "rewards": [ {"rewardType": 1, "amount": 200} ], "sortIndex": 6 },
+    { "id": 5007, "name": "初识战场", "description": "击败第1个敌人", "category": 2, "iconColorHex": "#EF5350", "iconSymbol": "⚔️", "targetCount": 1, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 50} ], "sortIndex": 1 },
+    { "id": 5008, "name": "百战不殆", "description": "击败100个敌人", "category": 2, "iconColorHex": "#E53935", "iconSymbol": "🛡️", "targetCount": 100, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 300}, {"rewardType": 3, "amount": 50} ], "sortIndex": 2 },
+    { "id": 5009, "name": "千军万马", "description": "击败1000个敌人", "category": 2, "iconColorHex": "#C62828", "iconSymbol": "🗡️", "targetCount": 1000, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 800}, {"rewardType": 1, "amount": 50} ], "sortIndex": 3 },
+    { "id": 5010, "name": "坚不可摧", "description": "在不丢失生命值的情况下通关", "category": 2, "iconColorHex": "#FFB74D", "iconSymbol": "🏰", "targetCount": 1, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 30} ], "sortIndex": 4 },
+    { "id": 5011, "name": "速战速决", "description": "在60秒内通关任意关卡", "category": 2, "iconColorHex": "#4FC3F7", "iconSymbol": "⚡", "targetCount": 1, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 300} ], "sortIndex": 5 },
+    { "id": 5012, "name": "完美防线", "description": "累计获得30颗星星", "category": 2, "iconColorHex": "#FFCA28", "iconSymbol": "⭐", "targetCount": 30, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 40} ], "sortIndex": 6 },
+    { "id": 5013, "name": "塔防大师", "description": "建造50座防御塔", "category": 3, "iconColorHex": "#66BB6A", "iconSymbol": "🏗️", "targetCount": 50, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 200} ], "sortIndex": 1 },
+    { "id": 5014, "name": "升级狂人", "description": "升级防御塔20次", "category": 3, "iconColorHex": "#26A69A", "iconSymbol": "🔧", "targetCount": 20, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 150} ], "sortIndex": 2 },
+    { "id": 5015, "name": "挥金如土", "description": "累计花费10000金币", "category": 3, "iconColorHex": "#FFC107", "iconSymbol": "💰", "targetCount": 10000, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 30} ], "sortIndex": 3 },
+    { "id": 5016, "name": "日进斗金", "description": "累计获得5000金币", "category": 3, "iconColorHex": "#FF9800", "iconSymbol": "🪙", "targetCount": 5000, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 20} ], "sortIndex": 4 },
+    { "id": 5017, "name": "收藏家", "description": "解锁3种不同的防御塔", "category": 3, "iconColorHex": "#AB47BC", "iconSymbol": "📦", "targetCount": 3, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 300} ], "sortIndex": 5 },
+    { "id": 5018, "name": "全副武装", "description": "解锁6种不同的防御塔", "category": 3, "iconColorHex": "#7B1FA2", "iconSymbol": "🎒", "targetCount": 6, "currentCount": 0, "status": 0, "rewards": [ {"rewardType": 1, "amount": 80} ], "sortIndex": 6 },
+    { "id": 5019, "name": "探索者", "description": "进入3个不同的关卡场景", "category": 4, "iconColorHex": "#42A5F5", "iconSymbol": "🧭", "targetCount": 3, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 200} ], "sortIndex": 1 },
+    { "id": 5020, "name": "世界旅人", "description": "进入8个不同的关卡场景", "category": 4, "iconColorHex": "#1E88E5", "iconSymbol": "🗺️", "targetCount": 8, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 30} ], "sortIndex": 2 },
+    { "id": 5021, "name": "隐藏秘密", "description": "在战斗中发现隐藏彩蛋", "category": 4, "iconColorHex": "#5C6BC0", "iconSymbol": "🔍", "targetCount": 1, "currentCount": 0, "status": 0, "rewards": [ {"rewardType": 1, "amount": 50} ], "sortIndex": 3 },
+    { "id": 5022, "name": "关卡猎人", "description": "全部关卡获得3星", "category": 4, "iconColorHex": "#FF7043", "iconSymbol": "🏅", "targetCount": 1, "currentCount": 0, "status": 0, "rewards": [ {"rewardType": 1, "amount": 100} ], "sortIndex": 4 },
+    { "id": 5023, "name": "全图鉴", "description": "查看所有敌人信息", "category": 4, "iconColorHex": "#8D6E63", "iconSymbol": "📖", "targetCount": 1, "currentCount": 0, "status": 0, "rewards": [ {"rewardType": 0, "amount": 500} ], "sortIndex": 5 },
+    { "id": 5024, "name": "土豪", "description": "单次持有超过10000金币", "category": 5, "iconColorHex": "#FFD54F", "iconSymbol": "💎", "targetCount": 10000, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 1, "amount": 20} ], "sortIndex": 1 },
+    { "id": 5025, "name": "效率达人", "description": "仅用3座塔通关任意关卡", "category": 5, "iconColorHex": "#4DD0E1", "iconSymbol": "🧠", "targetCount": 1, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 500} ], "sortIndex": 2 },
+    { "id": 5026, "name": "佛系玩家", "description": "在一局游戏中闲置超过30秒", "category": 5, "iconColorHex": "#A5D6A7", "iconSymbol": "😌", "targetCount": 1, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 100} ], "sortIndex": 3 },
+    { "id": 5027, "name": "连环大师", "description": "连续通关3个关卡不失败", "category": 5, "iconColorHex": "#FF8A65", "iconSymbol": "🔥", "targetCount": 3, "currentCount": 0, "status": 1, "rewards": [ {"rewardType": 0, "amount": 400}, {"rewardType": 3, "amount": 80} ], "sortIndex": 4 },
+    { "id": 5028, "name": "完美主义", "description": "所有成就全部完成", "category": 5, "iconColorHex": "#FFD700", "iconSymbol": "✨", "targetCount": 1, "currentCount": 0, "status": 0, "rewards": [ {"rewardType": 1, "amount": 200}, {"rewardType": 0, "amount": 2000} ], "sortIndex": 5 }
+  ],
+  "milestoneThresholds": [5, 10, 20, 28],
+  "milestoneRewards": [
+    {"rewardType": 1, "amount": 10},
+    {"rewardType": 1, "amount": 30},
+    {"rewardType": 1, "amount": 60},
+    {"rewardType": 1, "amount": 100}
+  ]
+}

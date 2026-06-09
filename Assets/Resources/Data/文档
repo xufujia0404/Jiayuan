@@ -1,0 +1,581 @@
+[NWB] Server stopped before assembly reload
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:OnBeforeAssemblyReload () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:93)
+UnityEditor.AssemblyReloadEvents:OnBeforeAssemblyReload ()
+
+NativeDllLoader: resolved all symbols with stored handle
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Native.NativeDllLoader:Load () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeDllLoader.cs:286)
+UnityTcp.Editor.Native.NativeUnityTcpBridgeHost:StartOrAttach (int,int,int&) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeUnityTcpBridgeHost.cs:38)
+UnityTcp.Editor.UnityTcpBridge:Start () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/UnityTcpBridge.cs:145)
+UnityTcp.Editor.UnityTcpBridge:.cctor () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/UnityTcpBridge.cs:116)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+<b><color=#2EA3FF>Codely-Bridge</color></b>: Native Codely Bridge running on port 51205. (OS=WindowsEditor, server=1.0.0-beta.1)
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.UnityTcpBridge:Start () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/UnityTcpBridge.cs:152)
+UnityTcp.Editor.UnityTcpBridge:.cctor () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/UnityTcpBridge.cs:116)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+音量: 70%
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.SettingsPanel:OnVolumeChanged (single) (at Assets/Scripts/UI/SettingsPanel.cs:179)
+UnityEngine.UI.Slider:set_value (single)
+TowerDefense.UI.SettingsPanel:LoadSettings () (at Assets/Scripts/UI/SettingsPanel.cs:95)
+TowerDefense.UI.SettingsPanel:Awake () (at Assets/Scripts/UI/SettingsPanel.cs:77)
+
+TowerSelectPanel Awake - _panel: True, _container: True, _prefab: False, _text: True
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:Awake () (at Assets/Scripts/UI/TowerSelectPanel.cs:29)
+
+已加载 2 个敌人数据
+UnityEngine.Debug:Log (object)
+TowerDefense.Wave.WaveManager:LoadEnemyData () (at Assets/Scripts/Wave/WaveManager.cs:77)
+TowerDefense.Wave.WaveManager:Start () (at Assets/Scripts/Wave/WaveManager.cs:61)
+
+  - 飞机
+UnityEngine.Debug:Log (object)
+TowerDefense.Wave.WaveManager:LoadEnemyData () (at Assets/Scripts/Wave/WaveManager.cs:80)
+TowerDefense.Wave.WaveManager:Start () (at Assets/Scripts/Wave/WaveManager.cs:61)
+
+  - 骷髅
+UnityEngine.Debug:Log (object)
+TowerDefense.Wave.WaveManager:LoadEnemyData () (at Assets/Scripts/Wave/WaveManager.cs:80)
+TowerDefense.Wave.WaveManager:Start () (at Assets/Scripts/Wave/WaveManager.cs:61)
+
+Generated 272 tower slots
+UnityEngine.Debug:Log (object)
+TowerDefense.Map.LevelBuilder:GenerateTowerSlots () (at Assets/Scripts/Map/LevelBuilder.cs:254)
+TowerDefense.Map.LevelBuilder:BuildLevel (TowerDefense.Data.LevelData) (at Assets/Scripts/Map/LevelBuilder.cs:121)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:88)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+Level '蜿蜒小径' built: 30x17, path=163, build=272, deco=15
+UnityEngine.Debug:Log (object)
+TowerDefense.Map.LevelBuilder:BuildLevel (TowerDefense.Data.LevelData) (at Assets/Scripts/Map/LevelBuilder.cs:123)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:88)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+使用配置的 WaveData: 波次 1
+UnityEngine.Debug:Log (object)
+TowerDefense.Wave.WaveManager:GetWaveData () (at Assets/Scripts/Wave/WaveManager.cs:224)
+TowerDefense.Wave.WaveManager:StartNextWave () (at Assets/Scripts/Wave/WaveManager.cs:177)
+TowerDefense.Wave.WaveManager:ForceStartWave () (at Assets/Scripts/Wave/WaveManager.cs:337)
+TowerDefense.Wave.WaveManager:OnGameStart (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Wave/WaveManager.cs:102)
+TowerDefense.Core.EventBus:Publish<TowerDefense.Core.GameStartEvent> (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Core/EventBus.cs:38)
+TowerDefense.Core.GameManager:StartGame (int) (at Assets/Scripts/Core/GameManager.cs:124)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:91)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+🌊 波次1开始: 准备出生 15 个敌人
+UnityEngine.Debug:Log (object)
+TowerDefense.Enemy.EnemySpawner:StartWave (TowerDefense.Data.WaveData) (at Assets/Scripts/Enemy/EnemySpawner.cs:105)
+TowerDefense.Wave.WaveManager:StartNextWave () (at Assets/Scripts/Wave/WaveManager.cs:184)
+TowerDefense.Wave.WaveManager:ForceStartWave () (at Assets/Scripts/Wave/WaveManager.cs:337)
+TowerDefense.Wave.WaveManager:OnGameStart (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Wave/WaveManager.cs:102)
+TowerDefense.Core.EventBus:Publish<TowerDefense.Core.GameStartEvent> (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Core/EventBus.cs:38)
+TowerDefense.Core.GameManager:StartGame (int) (at Assets/Scripts/Core/GameManager.cs:124)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:91)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+Wave started! Enemies to spawn: 15
+UnityEngine.Debug:Log (object)
+TowerDefense.Enemy.EnemySpawner:StartWave (TowerDefense.Data.WaveData) (at Assets/Scripts/Enemy/EnemySpawner.cs:111)
+TowerDefense.Wave.WaveManager:StartNextWave () (at Assets/Scripts/Wave/WaveManager.cs:184)
+TowerDefense.Wave.WaveManager:ForceStartWave () (at Assets/Scripts/Wave/WaveManager.cs:337)
+TowerDefense.Wave.WaveManager:OnGameStart (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Wave/WaveManager.cs:102)
+TowerDefense.Core.EventBus:Publish<TowerDefense.Core.GameStartEvent> (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Core/EventBus.cs:38)
+TowerDefense.Core.GameManager:StartGame (int) (at Assets/Scripts/Core/GameManager.cs:124)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:91)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+📢 第 1 波开始出怪！
+UnityEngine.Debug:Log (object)
+TowerDefense.Wave.WaveManager/<ShowWaveAnnouncement>d__36:MoveNext () (at Assets/Scripts/Wave/WaveManager.cs:208)
+UnityEngine.MonoBehaviour:StartCoroutine (System.Collections.IEnumerator)
+TowerDefense.Wave.WaveManager:StartNextWave () (at Assets/Scripts/Wave/WaveManager.cs:197)
+TowerDefense.Wave.WaveManager:ForceStartWave () (at Assets/Scripts/Wave/WaveManager.cs:337)
+TowerDefense.Wave.WaveManager:OnGameStart (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Wave/WaveManager.cs:102)
+TowerDefense.Core.EventBus:Publish<TowerDefense.Core.GameStartEvent> (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Core/EventBus.cs:38)
+TowerDefense.Core.GameManager:StartGame (int) (at Assets/Scripts/Core/GameManager.cs:124)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:91)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+Starting wave 1
+UnityEngine.Debug:Log (object)
+TowerDefense.Wave.WaveManager:StartNextWave () (at Assets/Scripts/Wave/WaveManager.cs:198)
+TowerDefense.Wave.WaveManager:ForceStartWave () (at Assets/Scripts/Wave/WaveManager.cs:337)
+TowerDefense.Wave.WaveManager:OnGameStart (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Wave/WaveManager.cs:102)
+TowerDefense.Core.EventBus:Publish<TowerDefense.Core.GameStartEvent> (TowerDefense.Core.GameStartEvent) (at Assets/Scripts/Core/EventBus.cs:38)
+TowerDefense.Core.GameManager:StartGame (int) (at Assets/Scripts/Core/GameManager.cs:124)
+TowerDefense.Core.GameManager:LoadLevel (int) (at Assets/Scripts/Core/GameManager.cs:91)
+TowerDefense.Core.GameManager:Start () (at Assets/Scripts/Core/GameManager.cs:69)
+
+[NWB] SetDllDirectory configured: C:\Users\97809\Desktop\sttop5\Library\PackageCache\cn.tuanjie.codely.bridge@1.0.52\Plugins\Win
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:EnsureWindowsDllSearchPath () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:262)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:IsAvailable (bool) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:176)
+UnityTcp.Editor.Tools.ManageWindowBridge:AutoStartStreamServer () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Tools/ManageWindowBridge.cs:76)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+[NWB] LoadLibrary succeeded: C:\Users\97809\Desktop\sttop5\Library\PackageCache\cn.tuanjie.codely.bridge@1.0.52\Plugins\Win\NativeWindowBridge.dll
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:EnsureWindowsNativeDllLoaded (string,string) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:306)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:EnsureWindowsDllSearchPath () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:263)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:IsAvailable (bool) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:176)
+UnityTcp.Editor.Tools.ManageWindowBridge:AutoStartStreamServer () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Tools/ManageWindowBridge.cs:76)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+[NWB-C++] Log callback registered
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Native.NativeWindowBridgeHost/<>c:<RegisterNativeLogCallback>b__24_0 (int,string) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:558)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:RegisterNativeLogCallback () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:560)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:StartOrAttach (int,int&) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:516)
+UnityTcp.Editor.Tools.ManageWindowBridge:AutoStartStreamServer () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Tools/ManageWindowBridge.cs:123)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+[NWB] Offscreen polling registered on EditorApplication.update.
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:RegisterOffscreenPolling () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:577)
+UnityTcp.Editor.Native.NativeWindowBridgeHost:StartOrAttach (int,int&) (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Native/NativeWindowBridgeHost.cs:529)
+UnityTcp.Editor.Tools.ManageWindowBridge:AutoStartStreamServer () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Tools/ManageWindowBridge.cs:123)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+[NWB] AutoStartStreamServer success on port 10087
+UnityEngine.Debug:Log (object)
+UnityTcp.Editor.Tools.ManageWindowBridge:AutoStartStreamServer () (at ./Library/PackageCache/cn.tuanjie.codely.bridge@1.0.52/Editor/Bridge/Tools/ManageWindowBridge.cs:126)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+TowerSelectPanel Awake - _panel: True, _container: True, _prefab: False, _text: True
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:Awake () (at Assets/Scripts/UI/TowerSelectPanel.cs:29)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:67)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Spawned enemy: 骷髅, 波次ID=1
+UnityEngine.Debug:Log (object)
+TowerDefense.Enemy.EnemySpawner:SpawnEnemy () (at Assets/Scripts/Enemy/EnemySpawner.cs:144)
+TowerDefense.Enemy.EnemySpawner:Update () (at Assets/Scripts/Enemy/EnemySpawner.cs:57)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Spawned enemy: 骷髅, 波次ID=1
+UnityEngine.Debug:Log (object)
+TowerDefense.Enemy.EnemySpawner:SpawnEnemy () (at Assets/Scripts/Enemy/EnemySpawner.cs:144)
+TowerDefense.Enemy.EnemySpawner:Update () (at Assets/Scripts/Enemy/EnemySpawner.cs:57)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Slot clicked: TowerSlot_24_16, IsOccupied: False
+UnityEngine.Debug:Log (object)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:131)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 箭塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 添加点击监听器: 剑塔
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:155)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+🔘 [动态按钮] 点击监听器已添加！
+UnityEngine.Debug:Log (object)
+TowerDefense.UI.TowerSelectPanel:CreateTowerButton (TowerDefense.Data.TowerData) (at Assets/Scripts/UI/TowerSelectPanel.cs:160)
+TowerDefense.UI.TowerSelectPanel:RefreshTowerButtons () (at Assets/Scripts/UI/TowerSelectPanel.cs:89)
+TowerDefense.UI.TowerSelectPanel:Show (TowerDefense.Tower.TowerSlot) (at Assets/Scripts/UI/TowerSelectPanel.cs:66)
+TowerDefense.Tower.TowerSlot:ShowTowerSelectPanel () (at Assets/Scripts/Tower/TowerSlot.cs:213)
+TowerDefense.Tower.TowerSlot:OnMouseDown () (at Assets/Scripts/Tower/TowerSlot.cs:139)
+UnityEngine.SendMouseEvents:DoSendMouseEvents (int)
+
+Selected slot: TowerSlot_24_16
+UnityEngine.Debug:Log (object)
+TowerPlacementTest:Update () (at Assets/Scripts/Tower/TowerPlacementTest.cs:37)
+
+Spawned enemy: 骷髅, 波次ID=1
+UnityEngine.Debug:Log (object)
+TowerDefense.Enemy.EnemySpawner:SpawnEnemy () (at Assets/Scripts/Enemy/EnemySpawner.cs:144)
+TowerDefense.Enemy.EnemySpawner:Update () (at Assets/Scripts/Enemy/EnemySpawner.cs:57)
+
+Spawned enemy: 骷髅, 波次ID=1
+UnityEngine.Debug:Log (object)
+TowerDefense.Enemy.EnemySpawner:SpawnEnemy () (at Assets/Scripts/Enemy/EnemySpawner.cs:144)
+TowerDefense.Enemy.EnemySpawner:Update () (at Assets/Scripts/Enemy/EnemySpawner.cs:57)
+

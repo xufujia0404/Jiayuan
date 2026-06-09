@@ -1,0 +1,99 @@
+{
+  "tag": "auto-save-2026-06-08-10-31-12-742-search-assets-c0p7gw",
+  "timestamp": "2026-06-08T02:31:12.742Z",
+  "type": "automatic",
+  "clientHistory": [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "用户需要选择地形资产。请搜索几种不同风格的地形（Terrain）相关资产，提供给用户选择。搜索关键词用 \"terrain\"，搜索3-4轮不同关键词（如 terrain, landscape, ground），返回结果供用户挑选。只搜索，不下载。"
+        }
+      ]
+    },
+    {
+      "role": "model",
+      "parts": [
+        {
+          "text": "401 team not allowed to access model. This team can only access models=['alias-only-proxy-models']. Tried to access glm-5-fp8"
+        }
+      ]
+    }
+  ],
+  "description": "Subagent auto-save triggered by terminal status: failed",
+  "prefixContext": {
+    "systemPrompt": {
+      "inheritance": "inherit",
+      "static": {
+        "kind": "core_static_ref",
+        "hash": "",
+        "placeholderText": "<core_static_ref hash=\"\" />"
+      },
+      "dynamic": {
+        "sections": [],
+        "joinedText": ""
+      }
+    },
+    "model": "codely-core"
+  },
+  "conversationRecord": {
+    "sessionId": "subagent-search-assets-c0p7gw",
+    "projectHash": "subagent-autosave",
+    "startTime": "2026-06-08T02:31:12.742Z",
+    "lastUpdated": "2026-06-08T02:31:12.742Z",
+    "messages": [
+      {
+        "id": "task-bb88d870-825d-44a8-ac92-a177d4c85080-user",
+        "timestamp": "2026-06-08T02:31:12.742Z",
+        "type": "user",
+        "content": "用户需要选择地形资产。请搜索几种不同风格的地形（Terrain）相关资产，提供给用户选择。搜索关键词用 \"terrain\"，搜索3-4轮不同关键词（如 terrain, landscape, ground），返回结果供用户挑选。只搜索，不下载。"
+      },
+      {
+        "id": "task-bb88d870-825d-44a8-ac92-a177d4c85080-gemini",
+        "timestamp": "2026-06-08T02:31:12.742Z",
+        "type": "gemini",
+        "content": "401 team not allowed to access model. This team can only access models=['alias-only-proxy-models']. Tried to access glm-5-fp8",
+        "model": "codely-core"
+      }
+    ]
+  },
+  "codelyVersion": "1.0.0-release.25",
+  "visibleTools": [
+    {
+      "functionDeclarations": []
+    }
+  ],
+  "history": [
+    {
+      "type": "user",
+      "text": "用户需要选择地形资产。请搜索几种不同风格的地形（Terrain）相关资产，提供给用户选择。搜索关键词用 \"terrain\"，搜索3-4轮不同关键词（如 terrain, landscape, ground），返回结果供用户挑选。只搜索，不下载。"
+    },
+    {
+      "type": "gemini",
+      "text": "401 team not allowed to access model. This team can only access models=['alias-only-proxy-models']. Tried to access glm-5-fp8"
+    }
+  ],
+  "subagentMetadata": {
+    "mainSessionId": "0c339202-14f4-4919-9548-1ae37124f5bd",
+    "taskId": "task-bb88d870-825d-44a8-ac92-a177d4c85080",
+    "taskOutputJsonlPath": "C:\\Users\\97809\\.codely-cli\\tmp\\01da8f7f118457d699c502ce33507571ef10496e85d01cb7ddd46780c12df8e7\\tasks\\task-bb88d870-825d-44a8-ac92-a177d4c85080.jsonl",
+    "subagentName": "search-assets",
+    "agentName": "search-assets",
+    "agentId": "search-assets-c0p7gw",
+    "status": "failed",
+    "resultSummary": "401 team not allowed to access model. This team can only access models=['alias-only-proxy-models']. Tried to access glm-5-fp8",
+    "model": "codely-core",
+    "systemPrompt": {
+      "inheritance": "inherit",
+      "static": {
+        "kind": "core_static_ref",
+        "hash": "",
+        "placeholderText": "<core_static_ref hash=\"\" />"
+      },
+      "dynamic": {
+        "sections": [],
+        "joinedText": ""
+      }
+    }
+  }
+}

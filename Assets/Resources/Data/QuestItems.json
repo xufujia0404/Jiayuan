@@ -1,0 +1,186 @@
+{
+  "items": [
+    {
+      "id": 5001,
+      "name": "登录游戏",
+      "description": "登录游戏1次",
+      "category": 0,
+      "iconPath": "QuestIcons/login",
+      "targetCount": 1,
+      "currentCount": 1,
+      "status": 2,
+      "rewards": [
+        { "rewardType": 0, "amount": 100, "itemPath": "" },
+        { "rewardType": 4, "amount": 20, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 5002,
+      "name": "完成1局游戏",
+      "description": "完成任意1局游戏",
+      "category": 0,
+      "iconPath": "QuestIcons/play_game",
+      "targetCount": 1,
+      "currentCount": 0,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 0, "amount": 150, "itemPath": "" },
+        { "rewardType": 4, "amount": 30, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 5003,
+      "name": "击败10个敌人",
+      "description": "在游戏中击败10个敌人",
+      "category": 0,
+      "iconPath": "QuestIcons/defeat_enemy",
+      "targetCount": 10,
+      "currentCount": 3,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 0, "amount": 200, "itemPath": "" },
+        { "rewardType": 4, "amount": 50, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 5004,
+      "name": "使用3次技能",
+      "description": "在游戏中使用3次技能",
+      "category": 0,
+      "iconPath": "QuestIcons/use_skill",
+      "targetCount": 3,
+      "currentCount": 0,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 0, "amount": 100, "itemPath": "" },
+        { "rewardType": 4, "amount": 25, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 5005,
+      "name": "购买1次商品",
+      "description": "在商城中购买1次商品",
+      "category": 0,
+      "iconPath": "QuestIcons/shop_buy",
+      "targetCount": 1,
+      "currentCount": 0,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 1, "amount": 10, "itemPath": "" },
+        { "rewardType": 4, "amount": 15, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 6001,
+      "name": "通过第1关",
+      "description": "通过关卡1",
+      "category": 1,
+      "iconPath": "QuestIcons/stage_clear",
+      "targetCount": 1,
+      "currentCount": 1,
+      "status": 2,
+      "rewards": [
+        { "rewardType": 0, "amount": 500, "itemPath": "" },
+        { "rewardType": 4, "amount": 80, "itemPath": "" }
+      ],
+      "tag": "new"
+    },
+    {
+      "id": 6002,
+      "name": "通过第5关",
+      "description": "通过关卡5",
+      "category": 1,
+      "iconPath": "QuestIcons/stage_clear",
+      "targetCount": 1,
+      "currentCount": 0,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 1, "amount": 50, "itemPath": "" },
+        { "rewardType": 4, "amount": 200, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 6003,
+      "name": "升级防御塔",
+      "description": "将任意防御塔升级到3级",
+      "category": 1,
+      "iconPath": "QuestIcons/tower_upgrade",
+      "targetCount": 1,
+      "currentCount": 0,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 0, "amount": 300, "itemPath": "" },
+        { "rewardType": 4, "amount": 100, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 7001,
+      "name": "初出茅庐",
+      "description": "完成第1局游戏",
+      "category": 2,
+      "iconPath": "QuestIcons/ach_first",
+      "targetCount": 1,
+      "currentCount": 1,
+      "status": 2,
+      "rewards": [
+        { "rewardType": 1, "amount": 20, "itemPath": "" },
+        { "rewardType": 4, "amount": 50, "itemPath": "" }
+      ],
+      "tag": ""
+    },
+    {
+      "id": 7002,
+      "name": "百战百胜",
+      "description": "累计胜利100次",
+      "category": 2,
+      "iconPath": "QuestIcons/ach_victory",
+      "targetCount": 100,
+      "currentCount": 12,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 1, "amount": 200, "itemPath": "" },
+        { "rewardType": 4, "amount": 500, "itemPath": "" }
+      ],
+      "tag": "hot"
+    },
+    {
+      "id": 8001,
+      "name": "节日特惠",
+      "description": "活动期间完成3局游戏",
+      "category": 3,
+      "iconPath": "QuestIcons/event_festival",
+      "targetCount": 3,
+      "currentCount": 0,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 0, "amount": 1000, "itemPath": "" },
+        { "rewardType": 4, "amount": 150, "itemPath": "" }
+      ],
+      "tag": "限时"
+    },
+    {
+      "id": 8002,
+      "name": "限时挑战",
+      "description": "活动期间击败50个敌人",
+      "category": 3,
+      "iconPath": "QuestIcons/event_challenge",
+      "targetCount": 50,
+      "currentCount": 10,
+      "status": 1,
+      "rewards": [
+        { "rewardType": 1, "amount": 100, "itemPath": "" },
+        { "rewardType": 4, "amount": 300, "itemPath": "" }
+      ],
+      "tag": "限时"
+    }
+  ],
+  "dailyActivity": 60,
+  "dailyActivityMax": 120
+}

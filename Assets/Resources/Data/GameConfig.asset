@@ -1,0 +1,372 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa83dcffdcc5304181d7c2af0008483, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  towers:
+  - towerName: "\u7BAD\u5854"
+    towerType: 0
+    levels:
+    - level: 1
+      cost: 100
+      upgradeCost: 80
+      sellValue: 50
+      damage: 20
+      attackRange: 5
+      attackSpeed: 2
+      projectileType: 0
+      projectileCount: 1
+      splashRadius: 0
+      slowAmount: 0
+      slowDuration: 0
+      maxTargets: 0
+    - level: 2
+      cost: 180
+      upgradeCost: 120
+      sellValue: 90
+      damage: 35
+      attackRange: 5.5
+      attackSpeed: 2.5
+      projectileType: 0
+      projectileCount: 1
+      splashRadius: 0
+      slowAmount: 0
+      slowDuration: 0
+      maxTargets: 0
+    - level: 3
+      cost: 300
+      upgradeCost: 0
+      sellValue: 150
+      damage: 50
+      attackRange: 6
+      attackSpeed: 3
+      projectileType: 0
+      projectileCount: 2
+      splashRadius: 0
+      slowAmount: 0
+      slowDuration: 0
+      maxTargets: 0
+  - towerName: "\u6CD5\u5E08\u5854"
+    towerType: 1
+    levels:
+    - level: 1
+      cost: 150
+      upgradeCost: 100
+      sellValue: 75
+      damage: 40
+      attackRange: 4
+      attackSpeed: 1.2
+      projectileType: 1
+      projectileCount: 0
+      splashRadius: 0
+      slowAmount: 0.3
+      slowDuration: 2
+      maxTargets: 0
+    - level: 2
+      cost: 250
+      upgradeCost: 150
+      sellValue: 125
+      damage: 65
+      attackRange: 4.5
+      attackSpeed: 1.5
+      projectileType: 1
+      projectileCount: 0
+      splashRadius: 0
+      slowAmount: 0.4
+      slowDuration: 2.5
+      maxTargets: 0
+    - level: 3
+      cost: 400
+      upgradeCost: 0
+      sellValue: 200
+      damage: 100
+      attackRange: 5
+      attackSpeed: 2
+      projectileType: 1
+      projectileCount: 0
+      splashRadius: 0
+      slowAmount: 0.5
+      slowDuration: 3
+      maxTargets: 0
+  - towerName: "\u70AE\u5854"
+    towerType: 3
+    levels:
+    - level: 1
+      cost: 200
+      upgradeCost: 150
+      sellValue: 100
+      damage: 80
+      attackRange: 3.5
+      attackSpeed: 0.8
+      projectileType: 2
+      projectileCount: 0
+      splashRadius: 1.5
+      slowAmount: 0
+      slowDuration: 0
+      maxTargets: 0
+    - level: 2
+      cost: 350
+      upgradeCost: 200
+      sellValue: 175
+      damage: 120
+      attackRange: 4
+      attackSpeed: 1
+      projectileType: 2
+      projectileCount: 0
+      splashRadius: 2
+      slowAmount: 0
+      slowDuration: 0
+      maxTargets: 0
+    - level: 3
+      cost: 550
+      upgradeCost: 0
+      sellValue: 275
+      damage: 200
+      attackRange: 4.5
+      attackSpeed: 1.2
+      projectileType: 2
+      projectileCount: 0
+      splashRadius: 2.5
+      slowAmount: 0
+      slowDuration: 0
+      maxTargets: 0
+  enemies:
+  - enemyName: "\u54E5\u5E03\u6797"
+    enemyType: 0
+    stats:
+      maxHealth: 50
+      moveSpeed: 2.5
+      goldReward: 15
+      lifeDamage: 1
+      physicalResistance: 0.1
+      magicResistance: 0
+      explosionResistance: 0
+      isFlying: 0
+      isArmored: 0
+      isMagicImmune: 0
+      canBeSlowed: 1
+      slowImmunity: 0
+      isBoss: 0
+      bossHealthMultiplier: 0
+  - enemyName: "\u517D\u4EBA"
+    enemyType: 1
+    stats:
+      maxHealth: 100
+      moveSpeed: 1.5
+      goldReward: 25
+      lifeDamage: 2
+      physicalResistance: 0.2
+      magicResistance: 0.1
+      explosionResistance: 0.1
+      isFlying: 0
+      isArmored: 1
+      isMagicImmune: 0
+      canBeSlowed: 1
+      slowImmunity: 0.2
+      isBoss: 0
+      bossHealthMultiplier: 0
+  - enemyName: "\u5DE8\u9B54"
+    enemyType: 2
+    stats:
+      maxHealth: 200
+      moveSpeed: 1
+      goldReward: 50
+      lifeDamage: 3
+      physicalResistance: 0.3
+      magicResistance: 0.15
+      explosionResistance: 0.2
+      isFlying: 0
+      isArmored: 1
+      isMagicImmune: 0
+      canBeSlowed: 1
+      slowImmunity: 0.3
+      isBoss: 0
+      bossHealthMultiplier: 0
+  - enemyName: "\u6076\u9B54\u8759\u8760"
+    enemyType: 5
+    stats:
+      maxHealth: 40
+      moveSpeed: 3.5
+      goldReward: 20
+      lifeDamage: 1
+      physicalResistance: 0
+      magicResistance: 0.3
+      explosionResistance: 0
+      isFlying: 1
+      isArmored: 0
+      isMagicImmune: 0
+      canBeSlowed: 1
+      slowImmunity: 0
+      isBoss: 0
+      bossHealthMultiplier: 0
+  - enemyName: "\u9ED1\u6697\u9A91\u58EB"
+    enemyType: 8
+    stats:
+      maxHealth: 1000
+      moveSpeed: 0.8
+      goldReward: 200
+      lifeDamage: 5
+      physicalResistance: 0.4
+      magicResistance: 0.3
+      explosionResistance: 0.2
+      isFlying: 0
+      isArmored: 1
+      isMagicImmune: 0
+      canBeSlowed: 1
+      slowImmunity: 0.5
+      isBoss: 1
+      bossHealthMultiplier: 2
+  - enemyName: "\u6076\u9B54\u9886\u4E3B"
+    enemyType: 8
+    stats:
+      maxHealth: 2000
+      moveSpeed: 0.6
+      goldReward: 500
+      lifeDamage: 10
+      attackDamage: 25
+      physicalResistance: 0.35
+      magicResistance: 0.25
+      explosionResistance: 0.2
+      isFlying: 0
+      isArmored: 1
+      isMagicImmune: 0
+      canBeSlowed: 1
+      slowImmunity: 0.6
+      isBoss: 1
+      bossHealthMultiplier: 3
+  waves:
+  - waveNumber: 1
+    waveDelay: 5
+    spawnInterval: 1.5
+    enemies:
+    - enemyName: "\u54E5\u5E03\u6797"
+      count: 5
+      spawnDelay: 0
+      spawnPoint: Main
+  - waveNumber: 2
+    waveDelay: 5
+    spawnInterval: 1.2
+    enemies:
+    - enemyName: "\u54E5\u5E03\u6797"
+      count: 8
+      spawnDelay: 0
+      spawnPoint: Main
+    - enemyName: "\u517D\u4EBA"
+      count: 2
+      spawnDelay: 0.5
+      spawnPoint: Main
+  - waveNumber: 3
+    waveDelay: 5
+    spawnInterval: 1
+    enemies:
+    - enemyName: "\u54E5\u5E03\u6797"
+      count: 6
+      spawnDelay: 0
+      spawnPoint: Main
+    - enemyName: "\u517D\u4EBA"
+      count: 4
+      spawnDelay: 0.3
+      spawnPoint: Main
+    - enemyName: "\u6076\u9B54\u8759\u8760"
+      count: 3
+      spawnDelay: 0.5
+      spawnPoint: Main
+  - waveNumber: 4
+    waveDelay: 5
+    spawnInterval: 0.8
+    enemies:
+    - enemyName: "\u517D\u4EBA"
+      count: 6
+      spawnDelay: 0
+      spawnPoint: Main
+    - enemyName: "\u5DE8\u9B54"
+      count: 2
+      spawnDelay: 0.5
+      spawnPoint: Main
+  - waveNumber: 5
+    waveDelay: 8
+    spawnInterval: 0.5
+    enemies:
+    - enemyName: "\u9ED1\u6697\u9A91\u58EB"
+      count: 1
+      spawnDelay: 0
+      spawnPoint: Main
+    - enemyName: "\u517D\u4EBA"
+      count: 5
+      spawnDelay: 1
+      spawnPoint: Main
+  - waveNumber: 6
+    waveDelay: 10
+    spawnInterval: 0.6
+    enemies:
+    - enemyName: "\u6076\u9B54\u9886\u4E3B"
+      count: 1
+      spawnDelay: 0
+      spawnPoint: Main
+    - enemyName: "\u9AB7\u9AC5"
+      count: 8
+      spawnDelay: 0.8
+      spawnPoint: Main
+    - enemyName: "\u98DE\u673A"
+      count: 4
+      spawnDelay: 0.5
+      spawnPoint: Main
+  levels:
+  - levelName: "\u65B0\u624B\u6751"
+    sceneName: Level_01
+    initialGold: 100
+    initialLife: 20
+    timeBetweenWaves: 10
+    waveIndices: 000000000100000002000000030000000400000005000000
+    towerSlots:
+    - {x: -3, y: 0, z: 0}
+    - {x: -1, y: 2, z: 0}
+    - {x: 1, y: 2, z: 0}
+    - {x: 3, y: 0, z: 0}
+    - {x: -2, y: -2, z: 0}
+    - {x: 2, y: -2, z: 0}
+    paths:
+    - pathName: Main
+      waypoints:
+      - {x: -5, y: 0, z: 0}
+      - {x: -3, y: 0, z: 0}
+      - {x: -1, y: 0, z: 0}
+      - {x: -1, y: 3, z: 0}
+      - {x: 1, y: 3, z: 0}
+      - {x: 1, y: 0, z: 0}
+      - {x: 3, y: 0, z: 0}
+      - {x: 5, y: 0, z: 0}
+  heroes:
+  - heroName: "\u5723\u9A91\u58EB"
+    stats:
+      maxHealth: 200
+      attackDamage: 30
+      attackRange: 1.5
+      attackSpeed: 1.2
+      moveSpeed: 2
+      healthRegen: 1
+      armor: 10
+    skills:
+    - skillName: "\u795E\u5723\u6253\u51FB"
+      description: "\u5BF9\u8303\u56F4\u5185\u654C\u4EBA\u9020\u6210\u795E\u5723\u4F24\u5BB3"
+      cooldown: 8
+      manaCost: 0
+      effectDuration: 0
+      effectRadius: 2
+      effectValue: 50
+    - skillName: "\u6CBB\u6108\u4E4B\u5149"
+      description: "\u6062\u590D\u81EA\u8EAB\u751F\u547D\u503C"
+      cooldown: 15
+      manaCost: 0
+      effectDuration: 0
+      effectRadius: 0
+      effectValue: 50

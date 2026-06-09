@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ea2d9497fc9a249afb7e0fc5752c3e, type: 3}
+  m_Name: "\u5251\u5854"
+  m_EditorClassIdentifier: 
+  towerName: "\u5251\u5854"
+  description: "\u5FEB\u901F\u653B\u51FB\u7684\u8FDC\u7A0B\u5854"
+  towerType: 4
+  towerPrefab: {fileID: 4819276864106576686, guid: 80b33ac87fb9b5a4a8330c078a06ced5, type: 3}
+  projectilePrefab: {fileID: 5540912076096084153, guid: 43ee5f76fef2c7c43b8def6c46f66db3, type: 3}
+  icon: {fileID: -9133253889385947938, guid: 8889158ec959514479a7036c66a835a6, type: 3}
+  levels:
+  - level: 1
+    cost: 125
+    upgradeCost: 80
+    sellValue: 50
+    damage: 20
+    attackRange: 4
+    attackSpeed: 1.5
+    projectileType: 0
+    projectileCount: 1
+    splashRadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    maxTargets: 0
+    pierceCount: 0
+  - level: 2
+    cost: 180
+    upgradeCost: 120
+    sellValue: 90
+    damage: 35
+    attackRange: 4.5
+    attackSpeed: 1.8
+    projectileType: 0
+    projectileCount: 2
+    splashRadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    maxTargets: 0
+    pierceCount: 0
+  - level: 3
+    cost: 300
+    upgradeCost: 240
+    sellValue: 150
+    damage: 55
+    attackRange: 5
+    attackSpeed: 2
+    projectileType: 0
+    projectileCount: 3
+    splashRadius: 0
+    slowAmount: 0
+    slowDuration: 0
+    maxTargets: 0
+    pierceCount: 0

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc87ea166fadd4e96239fc56abc241, type: 3}
+  m_Name: "\u98DE\u673A"
+  m_EditorClassIdentifier: 
+  enemyName: "\u98DE\u673A"
+  enemyType: 0
+  enemyPrefab: {fileID: 6295456705148256236, guid: 4f8cfc085cbce7c48a58055f15cf994b, type: 3}
+  stats:
+    maxHealth: 50
+    moveSpeed: 1
+    goldReward: 15
+    lifeDamage: 1
+    attackDamage: 3
+    physicalResistance: 0.1
+    magicResistance: 0
+    explosionResistance: 0
+    isFlying: 0
+    isArmored: 0
+    isMagicImmune: 0
+    canBeSlowed: 1
+    slowImmunity: 0
+    isBoss: 0
+    bossHealthMultiplier: 0
+    bossName: 

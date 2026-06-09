@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔法塔生成器</title>
+    <style>
+        body {
+            background: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        canvas {
+            background: transparent;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #4a4a8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #6a6aaa;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 魔法塔生成器</h1>
+    <canvas id="canvas" width="512" height="512"></canvas>
+    <div class="controls">
+        <button onclick="downloadImage()">下载 PNG</button>
+        <button onclick="regenerate()">重新生成</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // 像素化设置
+        ctx.imageSmoothingEnabled = false;
+
+        function drawMagicTower() {
+            ctx.clearRect(0, 0, 512, 512);
+            
+            // 缩放因子，让它更大
+            const scale = 1.5;
+            ctx.save();
+            ctx.translate(256, 400);
+            ctx.scale(scale, scale);
+            
+            // 塔楼主体 - 石砖
+            const towerColors = {
+                shadow: '#4a4a6a',
+                base: '#6a6a9a',
+                highlight: '#9a9aca',
+                top: '#7a4ada'
+            };
+
+            // 画塔楼底部
+            drawBrickRect(-60, 0, 120, 40, towerColors);
+            
+            // 塔楼主体1
+            drawBrickRect(-50, -50, 100, 50, towerColors);
+            
+            // 塔楼主体2
+            drawBrickRect(-40, -100, 80, 50, towerColors);
+            
+            // 塔楼顶部
+            drawBrickRect(-45, -110, 90, 10, towerColors);
+            
+            // 魔法塔顶
+            drawMagicRoof(-45, -110, 90, towerColors.top);
+            
+            // 魔法水晶
+            drawMagicCrystal(0, -150);
+            
+            // 魔法光环
+            drawMagicGlow(0, -130, 50);
+            
+            // 窗户
+            drawWindow(-20, -70, 15, 20);
+            drawWindow(5, -70, 15, 20);
+            drawWindow(-10, -30, 15, 20);
+            
+            // 装饰性魔法符文
+            drawMagicRunes(0, -20);
+            
+            ctx.restore();
+        }
+
+        function drawBrickRect(x, y, width, height, colors) {
+            // 主要填充
+            ctx.fillStyle = colors.base;
+            ctx.fillRect(x, y, width, height);
+            
+            // 阴影
+            ctx.fillStyle = colors.shadow;
+            ctx.fillRect(x, y, width/2, height);
+            
+            // 高光
+            ctx.fillStyle = colors.highlight;
+            ctx.fillRect(x + width/2, y, width/4, height);
+            
+            // 砖缝
+            ctx.strokeStyle = '#3a3a5a';
+            ctx.lineWidth = 2;
+            
+            // 水平砖缝
+            for (let i = 0; i < height; i += 20) {
+                ctx.beginPath();
+                ctx.moveTo(x, y + i);
+                ctx.lineTo(x + width, y + i);
+                ctx.stroke();
+            }
+            
+            // 垂直砖缝（错开排列）
+            for (let row = 0; row < height; row += 20) {
+                const offset = (row / 20) % 2 === 0 ? 20 : 0;
+                for (let i = offset; i < width; i += 40) {
+                    ctx.beginPath();
+                    ctx.moveTo(x + i, y + row);
+                    ctx.lineTo(x + i, y + row + 20);
+                    ctx.stroke();
+                }
+            }
+            
+            // 轮廓
+            ctx.strokeStyle = '#2a2a4a';
+            ctx.lineWidth = 3;
+            ctx.strokeRect(x, y, width, height);
+        }
+
+        function drawMagicRoof(x, y, width, color) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x + width, y);
+            ctx.lineTo(x + width/2, y - 40);
+            ctx.closePath();
+            
+            // 渐变填充
+            const gradient = ctx.createLinearGradient(x, y, x + width/2, y - 40);
+            gradient.addColorStop(0, '#5a3aba');
+            gradient.addColorStop(0.5, color);
+            gradient.addColorStop(1, '#9a6aff');
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            
+            // 轮廓
+            ctx.strokeStyle = '#3a2a8a';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+
+        function drawMagicCrystal(x, y) {
+            // 水晶光晕
+            const glow = ctx.createRadialGradient(x, y, 0, x, y, 35);
+            glow.addColorStop(0, 'rgba(180, 120, 255, 0.8)');
+            glow.addColorStop(0.5, 'rgba(150, 100, 255, 0.4)');
+            glow.addColorStop(1, 'rgba(120, 80, 255, 0)');
+            ctx.fillStyle = glow;
+            ctx.fillRect(x - 35, y - 35, 70, 70);
+            
+            // 水晶主体
+            ctx.beginPath();
+            ctx.moveTo(x, y - 25);
+            ctx.lineTo(x + 15, y);
+            ctx.lineTo(x + 10, y + 20);
+            ctx.lineTo(x - 10, y + 20);
+            ctx.lineTo(x - 15, y);
+            ctx.closePath();
+            
+            const crystalGrad = ctx.createLinearGradient(x - 15, y - 25, x + 15, y + 20);
+            crystalGrad.addColorStop(0, '#e0c0ff');
+            crystalGrad.addColorStop(0.3, '#c090ff');
+            crystalGrad.addColorStop(0.7, '#a060ff');
+            crystalGrad.addColorStop(1, '#8040ff');
+            ctx.fillStyle = crystalGrad;
+            ctx.fill();
+            
+            ctx.strokeStyle = '#6030cc';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // 水晶高光
+            ctx.beginPath();
+            ctx.moveTo(x - 5, y - 15);
+            ctx.lineTo(x, y - 5);
+            ctx.lineTo(x - 8, y + 5);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+
+        function drawMagicGlow(x, y, radius) {
+            // 多层魔法光环
+            for (let i = 0; i < 3; i++) {
+                const r = radius - i * 10;
+                const alpha = 0.3 - i * 0.1;
+                ctx.beginPath();
+                ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(150, 100, 255, ${alpha})`;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+            }
+            
+            // 魔法星星
+            const starPositions = [[-30, -20], [25, -15], [-20, 25], [30, 20], [0, -40]];
+            starPositions.forEach(([sx, sy], i) => {
+                drawStar(x + sx, y + sy, 5 + i % 2 * 3, '#ffdd44');
+            });
+        }
+
+        function drawStar(x, y, size, color) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                const angle = (i * 4 * Math.PI / 5) - Math.PI / 2;
+                const px = x + Math.cos(angle) * size;
+                const py = y + Math.sin(angle) * size;
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function drawWindow(x, y, width, height) {
+            // 窗框
+            ctx.fillStyle = '#2a2a4a';
+            ctx.fillRect(x - 2, y - 2, width + 4, height + 4);
+            
+            // 窗户玻璃（发光的魔法效果）
+            const glow = ctx.createRadialGradient(x + width/2, y + height/2, 0, x + width/2, y + height/2, height);
+            glow.addColorStop(0, 'rgba(150, 200, 255, 0.9)');
+            glow.addColorStop(0.5, 'rgba(100, 150, 255, 0.7)');
+            glow.addColorStop(1, 'rgba(80, 100, 200, 0.5)');
+            ctx.fillStyle = glow;
+            ctx.fillRect(x, y, width, height);
+        }
+
+        function drawMagicRunes(x, y) {
+            // 简单的魔法符文装饰
+            const runeColor = '#aa88ff';
+            ctx.strokeStyle = runeColor;
+            ctx.lineWidth = 2;
+            
+            // 圆圈符文
+            ctx.beginPath();
+            ctx.arc(x - 30, y, 8, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(x + 30, y, 8, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // 中间符文
+            ctx.beginPath();
+            ctx.moveTo(x, y - 10);
+            ctx.lineTo(x, y + 10);
+            ctx.moveTo(x - 8, y);
+            ctx.lineTo(x + 8, y);
+            ctx.stroke();
+        }
+
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'magic_tower.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function regenerate() {
+            drawMagicTower();
+        }
+
+        // 初始绘制
+        drawMagicTower();
+    </script>
+</body>
+</html>

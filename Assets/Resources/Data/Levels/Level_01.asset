@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cab405cf1d8974eafa0e897577c3c4, type: 3}
+  m_Name: Level_01
+  m_EditorClassIdentifier: 
+  levelName: "\u873F\u8712\u5C0F\u5F84"
+  sceneName: 
+  previewImage: {fileID: 0}
+  unlockCost: 0
+  isUnlocked: 0
+  mapRows:
+  - BBBDDBBBBBBBBBBBBBBBBBBBBPPEBBB
+  - BBPPPPPPPPPPPPPPPBBBBBBBBPPBBB
+  - BBPPPPPPPPPPPPPPPBBBBBBBBPPBBB
+  - BBPPBBBBBBBBBBBPPBBBBBBBBPPBBB
+  - BBPPBBBBBBBBBBBPPBBBBBBBBPPBBB
+  - BBPPBBBBBBBBBBBPPBBBBBBBBPPBBB
+  - BBPPBBBBBBBBBBBPPBBBBBBBBPPBBB
+  - BBPPPPPPPPPPBBBPPBBBBBBBBPPBBB
+  - BBPPPPPPPPPPDDDPPBBBBBBBBPPBBB
+  - BBBBBBBBBBPPDDDPPBBBBBBBBPPBBB
+  - BBBBBBBBBBPPDDDPPBBBBBBBBPPBBB
+  - BBDDBBBBBBPPBBBPPBBBBBBBBPPBBB
+  - BBDDBBPPBBPPBBBPPPPPPPPPPPPBBB
+  - SPPPPPPPPPPPBBBPPBBBBBBBBPPBBB
+  - PPPPPPPPPPPPBBBPPBBBBBBBBPPBBB
+  - GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+  - GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+  mapSize: {x: 0, y: 0}
+  paths: []
+  towerSlots: []
+  waveCount: 5
+  waves: []
+  timeBetweenWaves: 10
+  star1Requirement: 0
+  star2Requirement: 0
+  star3Requirement: 0
+  goldReward: 0
+  initialGold: 200
+  initialLife: 20

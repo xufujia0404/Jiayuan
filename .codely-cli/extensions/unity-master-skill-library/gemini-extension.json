@@ -1,0 +1,6 @@
+{
+  "name": "unity-master-skill-library",
+  "version": "1.0.0",
+  "description": "Unity Master Skill Library - 34个专业技能+12个子代理，覆盖关卡抽取、试玩广告制作、游戏开发工作流、开发进化分析、AI资产生成(TJGenerators)、AI资产生产、UI系统、环境渲染、游戏机制等领域。集成团结 AI 平台的多模态生成能力，无缝嵌入 Unity 编辑器工作流，支持 3D 模型、动画角色、地形、视频、天空盒、2D 精灵、表面材质、背景音乐、音效等多种游戏资产生成，并内置 30+ 调试经验文档和代码模板，为 Unity 开发提供全方位专家指导。",
+  "contextFileName": "CODELY.md"
+}
