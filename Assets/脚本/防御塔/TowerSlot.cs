@@ -137,6 +137,13 @@ namespace TowerDefense.Tower
         /// </summary>
         private void OnMouseDown()
         {
+            // 预览模式下点击槽位 = 确认放置，由 TowerPlacementPreview 处理
+            var preview = TowerPlacementPreview.Instance;
+            if (preview != null && preview.IsActive)
+            {
+                return;
+            }
+
             Debug.Log($"Slot clicked: {gameObject.name}, IsOccupied: {_isOccupied}");
             
             // 取消之前的选中状态（不隐藏面板，面板常驻）
@@ -196,28 +203,24 @@ namespace TowerDefense.Tower
         /// </summary>
         private void ShowTowerSelectPanel()
         {
-            // 先尝试通过 画布 下已知路径查找（包括非激活对象）
-            TowerSelectPanel panel = null;
+            var panel = TowerSelectPanel.Instance;
+            if (panel != null)
+            {
+                panel.Show(this);
+                return;
+            }
+
+            // 备用：通过路径查找
             var panelObj = GameObject.Find("画布/塔选择面板");
+            if (panelObj == null) panelObj = GameObject.Find("Canvas/TowerSelectPanel");
             if (panelObj != null)
             {
                 panel = panelObj.GetComponent<TowerSelectPanel>();
             }
-            
-            // 备用：用英文名查找（兼容重命名前）
-            if (panel == null)
-            {
-                panelObj = GameObject.Find("Canvas/TowerSelectPanel");
-                if (panelObj != null)
-                    panel = panelObj.GetComponent<TowerSelectPanel>();
-            }
-            
-            // 备用：在激活对象中查找
             if (panel == null)
             {
                 panel = FindObjectOfType<TowerSelectPanel>();
             }
-            
             if (panel != null)
             {
                 panel.Show(this);
@@ -229,25 +232,26 @@ namespace TowerDefense.Tower
         /// </summary>
         private void ShowTowerInfoPanel()
         {
-            TowerInfoPanel panel = null;
-            var panelObj = GameObject.Find("画布/塔信息面板");
-            if (panelObj != null)
+            if (_currentTower == null) return;
+            var infoPanel = TowerInfoPanel.Instance;
+            if (infoPanel != null)
             {
-                panel = panelObj.GetComponent<TowerInfoPanel>();
+                infoPanel.Show(_currentTower);
+                return;
             }
-            if (panel == null)
+            var infoObj = GameObject.Find("画布/塔信息面板");
+            if (infoObj == null) infoObj = GameObject.Find("Canvas/TowerInfoPanel");
+            if (infoObj != null)
             {
-                panelObj = GameObject.Find("Canvas/TowerInfoPanel");
-                if (panelObj != null)
-                    panel = panelObj.GetComponent<TowerInfoPanel>();
+                infoPanel = infoObj.GetComponent<TowerInfoPanel>();
             }
-            if (panel == null)
+            if (infoPanel == null)
             {
-                panel = FindObjectOfType<TowerInfoPanel>();
+                infoPanel = FindObjectOfType<TowerInfoPanel>();
             }
-            if (panel != null && _currentTower != null)
+            if (infoPanel != null)
             {
-                panel.Show(_currentTower);
+                infoPanel.Show(_currentTower);
             }
         }
         

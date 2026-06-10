@@ -133,6 +133,12 @@ namespace TowerDefense.Tower
             {
                 if (enemy == null || enemy.IsDead) continue;
 
+                // 兵营塔无法攻击飞行敌人
+                if (_towerData != null && _towerData.towerType == TowerType.Barracks)
+                {
+                    if (enemy.Data != null && enemy.Data.stats.isFlying) continue;
+                }
+
                 float priority = CalculateTargetPriority(enemy);
                 if (priority > bestPriority)
                 {

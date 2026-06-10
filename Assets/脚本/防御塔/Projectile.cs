@@ -250,7 +250,7 @@ namespace TowerDefense.Tower
                 if (_maxSplashTargets > 0 && hitCount >= _maxSplashTargets) break;
 
                 float distance = Vector3.Distance(transform.position, enemy.transform.position);
-                float damageMultiplier = 1f - (distance / _splashRadius) * 0.5f;
+                float damageMultiplier = 1f - (distance / _splashRadius) * 0.7f;
                 int damage = Mathf.RoundToInt(_damage * damageMultiplier);
                 enemy.Health.TakeDamage(damage, _damageType);
                 hitCount++;

@@ -145,20 +145,20 @@ namespace TowerDefense.Data.Config
                     new GameConfig.TowerConfig.TowerLevel
                     {
                         level = 1, cost = 200, upgradeCost = 150, sellValue = 100,
-                        damage = 80, attackRange = 3.5f, attackSpeed = 0.8f,
-                        projectileType = ProjectileType.Cannonball, splashRadius = 1.5f
+                        damage = 40, attackRange = 3.5f, attackSpeed = 0.6f,
+                        projectileType = ProjectileType.Cannonball, splashRadius = 1.2f, maxSplashTargets = 3
                     },
                     new GameConfig.TowerConfig.TowerLevel
                     {
                         level = 2, cost = 350, upgradeCost = 200, sellValue = 175,
-                        damage = 120, attackRange = 4, attackSpeed = 1f,
-                        projectileType = ProjectileType.Cannonball, splashRadius = 2f
+                        damage = 65, attackRange = 4, attackSpeed = 0.8f,
+                        projectileType = ProjectileType.Cannonball, splashRadius = 1.5f, maxSplashTargets = 4
                     },
                     new GameConfig.TowerConfig.TowerLevel
                     {
                         level = 3, cost = 550, upgradeCost = 0, sellValue = 275,
-                        damage = 200, attackRange = 4.5f, attackSpeed = 1.2f,
-                        projectileType = ProjectileType.Cannonball, splashRadius = 2.5f
+                        damage = 100, attackRange = 4.5f, attackSpeed = 1f,
+                        projectileType = ProjectileType.Cannonball, splashRadius = 2f, maxSplashTargets = 5
                     }
                 }
             });
@@ -365,7 +365,7 @@ namespace TowerDefense.Data.Config
                         attackSpeed = level.attackSpeed, projectileType = level.projectileType,
                         projectileCount = level.projectileCount, splashRadius = level.splashRadius,
                         slowAmount = level.slowAmount, slowDuration = level.slowDuration,
-                        maxTargets = level.maxTargets
+                        maxTargets = level.maxTargets, maxSplashTargets = level.maxSplashTargets
                     };
                 }
 

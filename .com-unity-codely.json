@@ -1,10 +1,10 @@
 {
-  "unity_port": -1,
-  "stream_port": 60285,
+  "unity_port": 50230,
+  "stream_port": 57193,
   "created_date": "2026-05-19T23:58:07.4865298Z",
-  "project_path": "C:/Users/97809/Desktop/sttop5/Assets",
+  "project_path": "C:/Users/97809/Desktop/Jiayuan/Assets",
   "reloading": false,
-  "reason": "stopped",
+  "reason": "ready",
   "seq": 1,
-  "last_heartbeat": "2026-06-09T07:34:09.8544740Z"
+  "last_heartbeat": "2026-06-10T01:15:04.0384354Z"
 }

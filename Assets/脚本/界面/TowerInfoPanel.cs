@@ -6,6 +6,8 @@ namespace TowerDefense.UI
 {
     public class TowerInfoPanel : MonoBehaviour
     {
+        public static TowerInfoPanel Instance { get; private set; }
+
         [Header("References")]
         [SerializeField] private GameObject _panel;
         
@@ -27,6 +29,8 @@ namespace TowerDefense.UI
         
         private void Awake()
         {
+            Instance = this;
+
             if (_panel != null)
             {
                 _panel.SetActive(false);

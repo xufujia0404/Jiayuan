@@ -109,6 +109,8 @@ namespace TowerDefense.Tower
                 foreach (var e in enemies)
                 {
                     if (e == null || e.IsDead) continue;
+                    // 士兵无法攻击飞行敌人
+                    if (e.Data != null && e.Data.stats.isFlying) continue;
                     float dist = Vector2.Distance(transform.position, e.transform.position);
                     if (dist < closestDist)
                     {
@@ -210,6 +212,14 @@ namespace TowerDefense.Tower
         private void BlockEnemy()
         {
             if (_target == null || _isBlocking) return;
+
+            // 飞行敌人无法被拦截
+            if (_target.Data != null && _target.Data.stats.isFlying)
+            {
+                ReleaseTarget();
+                _state = SoldierState.Returning;
+                return;
+            }
 
             _isBlocking = true;
             var movement = _target.GetComponent<EnemyMovement>();

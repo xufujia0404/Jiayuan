@@ -45,6 +45,7 @@ namespace TowerDefense.Data.Config
                 public float slowAmount;
                 public float slowDuration;
                 public int maxTargets;
+                public int maxSplashTargets;
             }
         }
 

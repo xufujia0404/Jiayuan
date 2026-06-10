@@ -34,6 +34,7 @@ namespace TowerDefense.Data
             public float slowAmount;
             public float slowDuration;
             public int maxTargets;
+            public int maxSplashTargets;
             public int pierceCount;
         }
     }

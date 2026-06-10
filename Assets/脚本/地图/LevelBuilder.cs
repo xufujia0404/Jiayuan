@@ -450,6 +450,12 @@ namespace TowerDefense.Map
 
         public void ClearAll()
         {
+            // 清除场景中所有已放置的塔
+            foreach (var tower in FindObjectsOfType<Tower.Tower>())
+            {
+                if (tower != null) Destroy(tower.gameObject);
+            }
+
             foreach (var slot in _towerSlots) { if (slot != null) Destroy(slot.gameObject); }
             _towerSlots.Clear();
 

@@ -16,7 +16,7 @@ MonoBehaviour:
   enemyType: 8
   enemyPrefab: {fileID: 4777033011282026022, guid: 74957a3cb04d0844d8464f3ca4856420, type: 3}
   stats:
-    maxHealth: 2000
+    maxHealth: 6000
     moveSpeed: 0.6
     goldReward: 500
     lifeDamage: 10

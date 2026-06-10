@@ -23,43 +23,46 @@ MonoBehaviour:
     cost: 100
     upgradeCost: 80
     sellValue: 50
-    damage: 12
-    attackRange: 5
-    attackSpeed: 1.5
+    damage: 40
+    attackRange: 3.5
+    attackSpeed: 0.6
     projectileType: 0
     projectileCount: 1
-    splashRadius: 8
+    splashRadius: 1.2
     slowAmount: 0
     slowDuration: 0
     maxTargets: 4
+    maxSplashTargets: 3
     pierceCount: 0
   - level: 2
     cost: 180
     upgradeCost: 120
     sellValue: 90
-    damage: 20
-    attackRange: 6
-    attackSpeed: 1.2
+    damage: 65
+    attackRange: 4
+    attackSpeed: 0.8
     projectileType: 0
     projectileCount: 1
-    splashRadius: 10
+    splashRadius: 1.5
     slowAmount: 0
     slowDuration: 0
     maxTargets: 6
+    maxSplashTargets: 4
     pierceCount: 0
   - level: 3
     cost: 300
     upgradeCost: 240
     sellValue: 150
-    damage: 30
-    attackRange: 7
+    damage: 100
+    attackRange: 4.5
     attackSpeed: 1
     projectileType: 0
     projectileCount: 2
-    splashRadius: 12
+    splashRadius: 2
     slowAmount: 0
     slowDuration: 0
     maxTargets: 8
+    maxSplashTargets: 5
     pierceCount: 0
   soldierData: {fileID: 0}
   soldierCountPerLevel: 030000000500000007000000

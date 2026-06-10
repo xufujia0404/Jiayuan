@@ -303,6 +303,8 @@ namespace TowerDefense.Tower
                 foreach (var enemy in enemiesInRange)
                 {
                     if (enemy == null || enemy.IsDead) continue;
+                    // 士兵无法攻击飞行敌人
+                    if (enemy.Data != null && enemy.Data.stats.isFlying) continue;
 
                     float dist = Vector3.Distance(soldier.transform.position, enemy.transform.position);
                     if (dist < bestDist)

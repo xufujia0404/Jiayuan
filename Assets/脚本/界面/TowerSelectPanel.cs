@@ -8,6 +8,8 @@ namespace TowerDefense.UI
 {
     public class TowerSelectPanel : MonoBehaviour
     {
+        public static TowerSelectPanel Instance { get; private set; }
+
         [Header("References")]
         [SerializeField] private GameObject _panel;
         [SerializeField] private Transform _towerButtonContainer;
@@ -26,6 +28,8 @@ namespace TowerDefense.UI
         
         private void Awake()
         {
+            Instance = this;
+            
             Debug.Log($"TowerSelectPanel Awake - _panel: {_panel != null}, _container: {_towerButtonContainer != null}, _prefab: {_towerButtonPrefab != null}, _text: {_slotInfoText != null}");
             
             if (_panel != null)
@@ -232,21 +236,23 @@ namespace TowerDefense.UI
                 return;
             }
             
-            Debug.Log($"📦 准备放置塔: {towerData.towerName}, 消耗金币: {towerData.levels[0].cost}");
-            
-            bool success = _currentSlot.PlaceTower(towerData);
-            Debug.Log($"📦 PlaceTower 返回: {success}");
-            
-            if (success)
+            // 进入放置预览模式
+            var preview = TowerPlacementPreview.Instance;
+            if (preview != null)
             {
-                Debug.Log("✅ 塔放置成功！");
-                // 面板常驻，不隐藏；刷新按钮状态
-                _currentSlot = null;
-                UpdateButtonStates();
+                preview.ShowPreview(towerData, _currentSlot);
+                // 隐藏选择面板
+                if (_panel != null) _panel.SetActive(false);
             }
             else
             {
-                Debug.LogWarning("⚠️ 塔放置失败！");
+                // 没有 Preview 组件时回退到直接放置
+                bool success = _currentSlot.PlaceTower(towerData);
+                if (success)
+                {
+                    _currentSlot = null;
+                    UpdateButtonStates();
+                }
             }
         }
         

@@ -62,6 +62,7 @@ namespace TowerDefense.Enemy
             if (_health != null)
             {
                 _health.Initialize(data.stats.maxHealth, data.stats.goldReward);
+                _health.SetOwnerData(data);
                 _health.OnHealthChanged += UpdateHealthBar;
                 _health.OnDeath += OnDeath;
             }

@@ -148,7 +148,7 @@ namespace TowerDefense.Tower
                     DamageType.Explosion,
                     _tower.CurrentStats.splashRadius,
                     0,
-                    _tower.CurrentStats.maxTargets
+                    _tower.CurrentStats.maxSplashTargets
                 );
             }
         }

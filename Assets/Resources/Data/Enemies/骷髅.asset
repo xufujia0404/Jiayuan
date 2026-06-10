@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: "\u9AB7\u9AC5"
   m_EditorClassIdentifier: 
   enemyName: "\u9AB7\u9AC5"
-  enemyType: 0
+  enemyType: 6
   enemyPrefab: {fileID: 126895168940254151, guid: ed8c44713fd7f934684c80abb3a1c19d, type: 3}
   stats:
-    maxHealth: 100
-    moveSpeed: 1
-    goldReward: 15
+    maxHealth: 80
+    moveSpeed: 1.8
+    goldReward: 20
     lifeDamage: 1
-    attackDamage: 5
-    physicalResistance: 0.1
-    magicResistance: 0
-    explosionResistance: 0
+    attackDamage: 8
+    physicalResistance: 0.15
+    magicResistance: 0.05
+    explosionResistance: 0.05
     isFlying: 0
-    isArmored: 0
+    isArmored: 1
     isMagicImmune: 0
     canBeSlowed: 1
-    slowImmunity: 0
+    slowImmunity: 0.1
     isBoss: 0
-    bossHealthMultiplier: 0
+    bossHealthMultiplier: 1
     bossName: 
