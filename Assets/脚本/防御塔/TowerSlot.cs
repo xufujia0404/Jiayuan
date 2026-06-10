@@ -137,7 +137,7 @@ namespace TowerDefense.Tower
         /// </summary>
         private void OnMouseDown()
         {
-            // 预览模式下点击槽位 = 确认放置，由 TowerPlacementPreview 处理
+            // 预览模式下不响应槽位点击（预览由按钮悬停控制，取消由右键/Esc控制）
             var preview = TowerPlacementPreview.Instance;
             if (preview != null && preview.IsActive)
             {

@@ -51,7 +51,7 @@ MonoBehaviour:
     pierceCount: 0
   - level: 3
     cost: 300
-    upgradeCost: 240
+    upgradeCost: 160
     sellValue: 150
     damage: 100
     attackRange: 4.5

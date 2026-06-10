@@ -223,6 +223,12 @@ namespace TowerDefense.Tower
                 _animator.SetTrigger("Upgrade");
             }
 
+            // 重新初始化攻击组件（兵营需要更新士兵数量和属性）
+            if (_attack != null)
+            {
+                _attack.Initialize(this);
+            }
+
             UpdateRangeIndicator();
             OnUpgrade?.Invoke(this);
             EventBus.Publish(new TowerUpgradedEvent { Tower = gameObject, Level = _currentLevel });

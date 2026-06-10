@@ -32,6 +32,7 @@ MonoBehaviour:
     slowAmount: 0
     slowDuration: 0
     maxTargets: 1
+    maxSplashTargets: 0
     pierceCount: 0
   - level: 2
     cost: 200
@@ -46,10 +47,11 @@ MonoBehaviour:
     slowAmount: 0
     slowDuration: 0
     maxTargets: 1
+    maxSplashTargets: 0
     pierceCount: 0
   - level: 3
     cost: 320
-    upgradeCost: 260
+    upgradeCost: 180
     sellValue: 160
     damage: 8
     attackRange: 7
@@ -60,6 +62,7 @@ MonoBehaviour:
     slowAmount: 0
     slowDuration: 0
     maxTargets: 1
+    maxSplashTargets: 0
     pierceCount: 0
   soldierData: {fileID: 0}
   soldierCountPerLevel: 030000000500000007000000

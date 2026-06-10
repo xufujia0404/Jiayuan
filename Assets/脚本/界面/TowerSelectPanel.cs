@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TowerDefense.Data;
 using TowerDefense.Tower;
 using TowerDefense.Core;
@@ -162,6 +163,10 @@ namespace TowerDefense.UI
                 Debug.Log($"🖱️ [动态按钮] Lambda被调用！");
                 OnTowerSelected(towerData);
             });
+
+            // 添加悬停事件
+            AddHoverEvents(buttonObj, towerData);
+
             Debug.Log($"🔘 [动态按钮] 点击监听器已添加！");
                 
             if (!canAfford)
@@ -196,6 +201,23 @@ namespace TowerDefense.UI
             }
             return 0;
         }
+
+        /// <summary>
+        /// 给动态创建的按钮添加悬停事件（PointerEnter/Exit）。
+        /// </summary>
+        private void AddHoverEvents(GameObject buttonObj, TowerData towerData)
+        {
+            EventTrigger trigger = buttonObj.GetComponent<EventTrigger>();
+            if (trigger == null) trigger = buttonObj.AddComponent<EventTrigger>();
+
+            var enterEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
+            enterEntry.callback.AddListener(_ => OnTowerHovered(towerData));
+            trigger.triggers.Add(enterEntry);
+
+            var exitEntry = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
+            exitEntry.callback.AddListener(_ => OnTowerHoverExit());
+            trigger.triggers.Add(exitEntry);
+        }
         
         private void SetupButtonManually(GameObject buttonObj, TowerData towerData)
         {
@@ -226,34 +248,58 @@ namespace TowerDefense.UI
             }
         }
         
+        /// <summary>
+        /// 鼠标悬停在塔按钮上 → 显示预览。
+        /// </summary>
+        public void OnTowerHovered(TowerData towerData)
+        {
+            if (_currentSlot == null || towerData == null) return;
+
+            var preview = TowerPlacementPreview.Instance;
+            if (preview != null)
+            {
+                preview.ShowPreview(towerData, _currentSlot);
+            }
+        }
+
+        /// <summary>
+        /// 鼠标离开塔按钮 → 清除预览。
+        /// </summary>
+        public void OnTowerHoverExit()
+        {
+            var preview = TowerPlacementPreview.Instance;
+            if (preview != null && preview.IsActive)
+            {
+                preview.ClearPreviewOnly();
+            }
+        }
+
         public void OnTowerSelected(TowerData towerData)
         {
             Debug.Log($"📞 OnTowerSelected 被调用！塔: {towerData?.towerName}, _currentSlot: {_currentSlot != null}");
-            
+
             if (_currentSlot == null || towerData == null)
             {
                 Debug.LogError("❌ _currentSlot 或 towerData 是 null！");
                 return;
             }
-            
-            // 进入放置预览模式
+
+            // 清除预览
             var preview = TowerPlacementPreview.Instance;
-            if (preview != null)
+            if (preview != null && preview.IsActive)
             {
-                preview.ShowPreview(towerData, _currentSlot);
-                // 隐藏选择面板
-                if (_panel != null) _panel.SetActive(false);
+                preview.ClearPreviewOnly();
             }
-            else
+
+            // 直接建造
+            bool success = _currentSlot.PlaceTower(towerData);
+            if (success)
             {
-                // 没有 Preview 组件时回退到直接放置
-                bool success = _currentSlot.PlaceTower(towerData);
-                if (success)
-                {
-                    _currentSlot = null;
-                    UpdateButtonStates();
-                }
+                _currentSlot = null;
+                Hide();
+                UpdateButtonStates();
             }
+            // 建造失败（金币不足等）→ 保持面板打开
         }
         
         public void UpdateButtonStates()
@@ -284,7 +330,7 @@ namespace TowerDefense.UI
         }
     }
     
-    public class TowerButton : MonoBehaviour
+    public class TowerButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private Text _nameText;
         [SerializeField] private Text _costText;
@@ -382,7 +428,7 @@ namespace TowerDefense.UI
         private void OnClicked()
         {
             Debug.Log($"🖱️ TowerButton.OnClicked 被调用！塔: {_towerData?.towerName}, panel: {_panel != null}");
-            
+
             if (_panel != null)
             {
                 Debug.Log($"📞 调用 _panel.OnTowerSelected...");
@@ -391,6 +437,22 @@ namespace TowerDefense.UI
             else
             {
                 Debug.LogError("❌ _panel 是 null！");
+            }
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if (_panel != null && _towerData != null)
+            {
+                _panel.OnTowerHovered(_towerData);
+            }
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            if (_panel != null)
+            {
+                _panel.OnTowerHoverExit();
             }
         }
     }

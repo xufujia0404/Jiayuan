@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TowerDefense.Data;
+using TowerDefense.UI;
 
 namespace TowerDefense.Enemy
 {
@@ -104,6 +105,12 @@ namespace TowerDefense.Enemy
             if (damageType == DamageType.Magic && _ownerData != null && _ownerData.stats.isMagicImmune)
             {
                 actualDamage = 0;
+                DamageText.SpawnImmune(transform.position);
+            }
+
+            if (actualDamage > 0)
+            {
+                DamageText.Spawn(transform.position, actualDamage, damageType);
             }
 
             _currentHealth -= actualDamage;

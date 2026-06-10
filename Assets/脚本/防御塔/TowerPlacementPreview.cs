@@ -1,6 +1,7 @@
 using UnityEngine;
 using TowerDefense.Data;
 using TowerDefense.Core;
+using TowerDefense.UI;
 
 namespace TowerDefense.Tower
 {
@@ -47,33 +48,24 @@ namespace TowerDefense.Tower
         {
             if (!_isActive) return;
 
-            // 右键或 Escape 取消预览
+            // 右键或 Escape 取消预览（同时关闭选择面板）
             if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
             {
-                CancelPreview();
+                CancelPreviewAndClosePanel();
                 return;
-            }
-
-            // 左键确认放置
-            if (Input.GetMouseButtonDown(0))
-            {
-                ConfirmPlacement();
             }
         }
 
         /// <summary>
-        /// 显示指定塔在指定槽位的放置预览。
+        /// 显示指定塔在指定槽位的放置预览（悬停触发）。
         /// </summary>
         public void ShowPreview(TowerData towerData, TowerSlot slot)
         {
             if (towerData == null || slot == null) return;
 
-            // 如果已经在预览同一个塔和槽位，直接确认
+            // 同塔同槽 → 不重复创建
             if (_isActive && _previewData == towerData && _targetSlot == slot)
-            {
-                ConfirmPlacement();
                 return;
-            }
 
             ClearPreview();
 
@@ -81,51 +73,43 @@ namespace TowerDefense.Tower
             _targetSlot = slot;
             _isActive = true;
 
-            // 创建半透明塔预览
             CreatePreviewObject(towerData, slot);
-
-            // 创建范围圈
             CreateRangeCircle(towerData, slot);
 
-            // 刷新金币事件监听
             EventBus.Unsubscribe<GoldChangedEvent>(OnGoldChanged);
             EventBus.Subscribe<GoldChangedEvent>(OnGoldChanged);
         }
 
         /// <summary>
-        /// 取消预览。
+        /// 仅清除预览视觉，不关闭面板。
         /// </summary>
-        public void CancelPreview()
+        public void ClearPreviewOnly()
         {
-            ClearPreview();
-
-            // 重新显示塔选择面板
-            if (_targetSlot != null)
+            if (_previewObject != null)
             {
-                _targetSlot.SelectSlot();
+                Destroy(_previewObject);
+                _previewObject = null;
             }
+            if (_rangeCircle != null)
+            {
+                Destroy(_rangeCircle);
+                _rangeCircle = null;
+            }
+            _previewRenderers = null;
+            _isActive = false;
+            _previewData = null;
+            _targetSlot = null;
+            EventBus.Unsubscribe<GoldChangedEvent>(OnGoldChanged);
         }
 
-        private void ConfirmPlacement()
+        /// <summary>
+        /// 取消预览并关闭选择面板。
+        /// </summary>
+        public void CancelPreviewAndClosePanel()
         {
-            if (_previewData == null || _targetSlot == null)
-            {
-                ClearPreview();
-                return;
-            }
-
-            TowerData data = _previewData;
-            TowerSlot slot = _targetSlot;
-
-            ClearPreview();
-
-            // 执行放置
-            bool success = slot.PlaceTower(data);
-            if (!success)
-            {
-                // 放置失败（金币不足等），重新显示选择面板
-                slot.SelectSlot();
-            }
+            ClearPreviewOnly();
+            var panel = TowerSelectPanel.Instance;
+            if (panel != null) panel.Hide();
         }
 
         private void ClearPreview()

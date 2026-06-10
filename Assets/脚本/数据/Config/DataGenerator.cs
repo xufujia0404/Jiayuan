@@ -102,7 +102,7 @@ namespace TowerDefense.Data.Config
                     },
                     new GameConfig.TowerConfig.TowerLevel
                     {
-                        level = 3, cost = 300, upgradeCost = 0, sellValue = 150,
+                        level = 3, cost = 300, upgradeCost = 200, sellValue = 150,
                         damage = 50, attackRange = 6, attackSpeed = 3,
                         projectileType = ProjectileType.Arrow, projectileCount = 2
                     }
@@ -129,7 +129,7 @@ namespace TowerDefense.Data.Config
                     },
                     new GameConfig.TowerConfig.TowerLevel
                     {
-                        level = 3, cost = 400, upgradeCost = 0, sellValue = 200,
+                        level = 3, cost = 400, upgradeCost = 150, sellValue = 200,
                         damage = 100, attackRange = 5, attackSpeed = 2,
                         projectileType = ProjectileType.Magic, slowAmount = 0.5f, slowDuration = 3
                     }
@@ -156,7 +156,7 @@ namespace TowerDefense.Data.Config
                     },
                     new GameConfig.TowerConfig.TowerLevel
                     {
-                        level = 3, cost = 550, upgradeCost = 0, sellValue = 275,
+                        level = 3, cost = 550, upgradeCost = 180, sellValue = 275,
                         damage = 100, attackRange = 4.5f, attackSpeed = 1f,
                         projectileType = ProjectileType.Cannonball, splashRadius = 2f, maxSplashTargets = 5
                     }

@@ -42,6 +42,8 @@ namespace TowerDefense.Tower
         {
             base.Initialize(tower);
 
+            int oldMax = _maxSoldiers;
+
             // Determine max soldiers from tower data
             if (_tower.Data != null && _tower.Data.soldierCountPerLevel != null
                 && _tower.Data.soldierCountPerLevel.Length > 0)
@@ -64,6 +66,42 @@ namespace TowerDefense.Tower
                 _soldierData = _tower.Data.soldierData;
 
             SetupRallyPoint();
+
+            // 升级后补充新士兵
+            if (_soldiersSpawned && _maxSoldiers > oldMax)
+            {
+                SpawnAdditionalSoldiers(_maxSoldiers - oldMax);
+            }
+        }
+
+        /// <summary>
+        /// 补充指定数量的新士兵（升级时调用）。
+        /// </summary>
+        private void SpawnAdditionalSoldiers(int count)
+        {
+            ClearDeadSoldiers();
+            Vector3 basePos = _rallyPoint != null ? _rallyPoint.position : transform.position;
+
+            for (int i = 0; i < count; i++)
+            {
+                float angle = Random.Range(0f, 2f * Mathf.PI);
+                Vector3 offset = new Vector3(
+                    Mathf.Cos(angle) * _spawnRadius,
+                    Mathf.Sin(angle) * _spawnRadius,
+                    0f
+                );
+                Vector3 spawnPos = basePos + offset;
+
+                GameObject soldierObj = Instantiate(_soldierData.soldierPrefab, spawnPos, Quaternion.identity);
+                Soldier soldier = soldierObj.GetComponent<Soldier>();
+                if (soldier == null) soldier = soldierObj.AddComponent<Soldier>();
+
+                soldier.Initialize(_soldierData, _rallyPoint);
+                soldier.OnSoldierDeath += OnSoldierDeath;
+                _soldiers.Add(soldier);
+            }
+
+            Debug.Log($"Barracks upgraded: spawned {count} additional soldiers (total: {_soldiers.Count})");
         }
 
         /// <summary>
